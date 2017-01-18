@@ -1,11 +1,14 @@
 {
-  "name": "node-es7-boilerplate",
+  "name": "hapi-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "prepublish": "npm run build",
+    "start": "node .",
+    "start:dev": "nodemon .",
     "test": "ava test",
-    "build": "babel src -d dist -s inline"
+    "build": "babel src -d dist -s inline",
+    "prepublish": "npm run build",
+    "prestart": "npm run build"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +24,18 @@
     "babel-plugin-transform-export-extensions": "^6.8.0",
     "babel-plugin-transform-object-rest-spread": "^6.20.2",
     "babel-polyfill": "^6.3.14",
-    "babel-preset-latest": "^6.16.0"
+    "babel-preset-latest": "^6.16.0",
+    "nodemon": "^1.11.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "blipp": "^2.3.0",
+    "boom": "^4.2.0",
+    "hapi": "^16.1.0",
+    "hapi-async-handler": "^1.0.3",
+    "hapi-swagger": "^7.6.0",
+    "inert": "^4.1.0",
+    "joi": "^10.2.0",
+    "tv": "^6.1.0",
+    "vision": "^4.1.1"
+  }
 }
