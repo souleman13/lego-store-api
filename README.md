@@ -9,3 +9,5 @@
 ```bash
 $ git clone https://github.com/TylerGarlick/hapi-boilerplate [name of project]
 ```
+
+Loads all the plugins that I use on a frequent basis.
