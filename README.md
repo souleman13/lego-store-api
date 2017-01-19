@@ -2,7 +2,7 @@
 
 > Getting started with ES2017 and Hapi
 
-[![Build Status](https://travis-ci.org/TylerGarlick/hapi-plugin-boilerplate.svg?branch=master)](https://travis-ci.org/TylerGarlick/hapi-plugin-boilerplate)
+[![Build Status](https://travis-ci.org/TylerGarlick/hapi-boilerplate.svg?branch=master)](https://travis-ci.org/TylerGarlick/hapi-boilerplate)
 
 ## Usage
 
