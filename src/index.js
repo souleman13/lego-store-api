@@ -1,9 +1,9 @@
 import { Server } from 'hapi';
 
-const server = new Server({});
+const server = new Server();
 
 const port = process.env.PORT || 4000;
-const env = process.env.NODE_ENV || 'development';
+
 server.connection({
   port, router: {
     isCaseSensitive: false
@@ -20,6 +20,28 @@ server.register([
   require('tv'),
   require('hapi-async-handler'),
   {
+    register: require('good'),
+    options: {
+      ops: {
+        interval: 5000
+      },
+      reporters: {
+        console: [
+          {
+            module: 'good-squeeze',
+            name: 'Squeeze',
+            args: [{
+              log: '*',
+              response: '*', request: '*', error: '*'
+            }]
+          },
+          {
+            module: 'good-console'
+          }, 'stdout']
+      }
+    }
+  },
+  {
     register: require('hapi-swagger'),
     options: {
       cors: true,
@@ -28,16 +50,7 @@ server.register([
       info: {
         title: 'Example',
         version: '1.0.0',
-        description: 'An example api',
-//        contact: {
-//          name: '',
-//          url: '',
-//          email: ''
-//        },
-//        license: {
-//          name: '',
-//          url: ''
-//        }
+        description: 'An example api'
       }
     }
   }
