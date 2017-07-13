@@ -16,7 +16,7 @@ export default [
           id: Joi.string().required()
         },
         payload: {
-          name: Joi.string().trim().required,
+          name: Joi.string().trim().required(),
           price: Joi.number().min(0),
           description: Joi.string(),
           imageUrl: Joi.string().uri(),
