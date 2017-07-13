@@ -54,6 +54,12 @@ server.register([
         description: 'An example api'
       }
     }
+  },
+  {
+    register: require('hapi-router'),
+    options: {
+      routes: 'src/routes/**/*'
+    }
   }
 ], err => {
   if (err) throw err;
