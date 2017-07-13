@@ -12,11 +12,11 @@ export default [
       tags: ['api'],
       validate: {
         payload: {
-            name: Joi.string().trim(),
+            name: Joi.string().trim().required,
             price: Joi.number().min(0),
             description: Joi.string(),
             imageUrl: Joi.string().uri(),
-            isActive: Joi.boolean()
+            isActive: Joi.boolean(),
         }
       }
     },
